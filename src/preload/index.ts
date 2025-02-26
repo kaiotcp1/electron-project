@@ -16,7 +16,11 @@ const api = {
     return () => {
       ipcRenderer.off('register-client', callback);
     }
-  }
+  },
+  fetchUsers: () => {
+    //INVOKE => enviar e receber.
+    return  ipcRenderer.invoke('fetch-users')
+  },
 };
 
 // Use `contextBridge` APIs to expose Electron APIs to
