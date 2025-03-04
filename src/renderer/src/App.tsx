@@ -5,7 +5,6 @@ import { Routes } from "./Routes"
 function App(): JSX.Element {
   return (
     <QueryClientProvider client={queryClient}>
-
       <Routes />
     </QueryClientProvider>
   )

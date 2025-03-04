@@ -5,3 +5,19 @@
 html {
   overflow: hidden
 }
+
+.custom-scrollbar::-webkit-scrollbar {
+  @apply w-2 bg-transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  @apply bg-gray-900;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  @apply bg-gray-800 rounded-none hover:bg-gray-800;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-500;
+}

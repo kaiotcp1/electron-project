@@ -9,7 +9,6 @@ const Home = () => {
   const { data } = useQuery({
     queryKey: ['customers'], queryFn: async () => {
       const response = await window.api.fetchAllCustomers();
-      console.log('RESPONSE FROM CLIENT', response);
       return response
     }
   })
@@ -28,16 +27,16 @@ const Home = () => {
   //   console.log('RESPONSE FROM CLIENT', response);
   // }
 
-  return <div className="flex-1 flex flex-col py-12 text-white">
+  return <div className="flex-1 flex flex-col py-12 text-white mx-10">
     <div>
       <h1 className="text-white text-xl lg:text-2xl font-semibold mb-4">Todos Clientes</h1>
     </div>
 
-    <section className="flex flex-col gap-6 w-full h-full pb-10">
+    <section className="flex flex-col gap-6 w-full h-full pb-10 ">
       {data?.map((customer: Customer) => (
         <Link key={customer?._id}
           to={'/'}
-          className="bg-gray-900 shadow-lg px-4 py-4"
+          className="bg-gray-900 shadow-lg px-4 py-4 rounded-md"
         >
           <p className="mb-2 font-semibold text-lg text-white">{customer.name}</p>
           <p className="font-normal">Email: {customer.email}</p>

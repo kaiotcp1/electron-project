@@ -36,7 +36,6 @@ export function Layout() {
           transition-all 
           duration-300 
           ease-in-out 
-          overflow-hidden 
           relative
         `}
       >
@@ -98,7 +97,7 @@ export function Layout() {
           <h1 className="text-xl font-bold">Dev Clientes</h1>
         </header>
 
-        <div className="flex-1 overflow-auto mx-10">
+        <div className="flex-1 overflow-y-auto custom-scrollbar">
           <Outlet />
         </div>
       </main>
