@@ -9,7 +9,7 @@ import './store'
 function createWindow(): void {
   // Create the browser window.
   const mainWindow = new BrowserWindow({
-    width: 900,
+    width: 1200,
     height: 970,
     show: true,
     backgroundColor: '#030712',
@@ -38,6 +38,8 @@ function createWindow(): void {
   mainWindow.on('ready-to-show', () => {
     mainWindow.show()
   })
+
+  mainWindow.webContents.openDevTools();
 
   mainWindow.webContents.setWindowOpenHandler((details) => {
     shell.openExternal(details.url)
