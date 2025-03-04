@@ -98,7 +98,7 @@ export function Layout() {
           <h1 className="text-xl font-bold">Dev Clientes</h1>
         </header>
 
-        <div className="flex-1 overflow-auto">
+        <div className="flex-1 overflow-auto mx-10">
           <Outlet />
         </div>
       </main>
