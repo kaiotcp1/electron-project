@@ -12,20 +12,6 @@ const Home = () => {
       return response
     }
   })
-  // const handleFetchUsers = async () => {
-  //   const response = await window.api.fetchAllCustomers();
-  //   console.log('RESPONSE FROM CLIENT', response);
-  // }
-
-  // const handleUseById = async () => {
-  //   const response = await window.api.fetchCustomerById("88898cbc-5203-4cd1-84ff-2aa318433a73");
-  //   console.log('RESPONSE FROM CLIENT', response);
-  // }
-
-  // const handleDeleteCustomer = async () => {
-  //   const response = await window.api.deleteCustomer("88898cbc-5203-4cd1-84ff-2aa318433a73");
-  //   console.log('RESPONSE FROM CLIENT', response);
-  // }
 
   return <div className="flex-1 flex flex-col py-12 text-white mx-10">
     <div>
