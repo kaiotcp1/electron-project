@@ -3,7 +3,7 @@ import { Router, Route } from "electron-router-dom";
 import Home from "./pages/home";
 import Create from "./pages/create";
 import Detail from "./pages/detail";
-import About from "./pages/about";
+import About from './pages/about'
 import { Layout } from "./components/layout";
 
 export function Routes() {
