@@ -1,7 +1,6 @@
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { error } from "console";
 import { ArrowLeft, Trash } from "phosphor-react";
-import { data, Link, Navigate, useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams } from "react-router-dom";
 
 
 const Detail = () => {
@@ -20,10 +19,8 @@ const Detail = () => {
     mutationFn: async (id: string) => {
       try {
         await window.api.deleteCustomer(id);
-        console.log('CLIENTE DELETADO COM SUCESSO !');
       } catch (error: any) {
         console.log(error);
-
       }
     }, onSuccess: () => {
       queryClient.invalidateQueries({ queryKey: ['customers'] });

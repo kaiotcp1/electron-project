@@ -1,10 +1,11 @@
 {
   "name": "devclientes",
+  "productName": "Dev Clientes",
   "version": "0.0.0",
-  "description": "An Electron application with React and TypeScript",
+  "description": "Projeto de estudo de Electron + React + Typescript",
   "main": "./out/main/index.js",
-  "author": "example.com",
-  "homepage": "https://electron-vite.org",
+  "author": "github.com/kaiotcp1",
+  "homepage": "https://github.com/kaiotcp1",
   "scripts": {
     "format": "prettier --write .",
     "lint": "eslint --cache .",
@@ -13,7 +14,7 @@
     "typecheck": "npm run typecheck:node && npm run typecheck:web",
     "start": "electron-vite preview",
     "dev": "electron-vite dev --watch",
-    "build": "npm run typecheck && electron-vite build",
+    "build": "electron-vite build",
     "postinstall": "electron-builder install-app-deps",
     "build:unpack": "npm run build && electron-builder --dir",
     "build:win": "npm run build && electron-builder --win",
@@ -33,7 +34,9 @@
     "pouchdb": "^9.0.0",
     "pouchdb-browser": "^9.0.0",
     "react-router-dom": "^7.2.0",
-    "vite-plugin-static-copy": "^2.2.0"
+    "vite-plugin-static-copy": "^2.2.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@electron-toolkit/eslint-config-prettier": "^3.0.0",
@@ -53,8 +56,6 @@
     "eslint-plugin-react-refresh": "^0.4.19",
     "postcss": "^8.5.3",
     "prettier": "^3.5.1",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
     "tailwindcss": "^3.4.17",
     "typescript": "^5.7.3",
     "vite": "^6.1.0"

@@ -1,4 +1,4 @@
-appId: com.electron.app
+appId: kaiotcp1.electron.app
 productName: devclientes
 directories:
   buildResources: build
@@ -31,13 +31,13 @@ dmg:
 linux:
   target:
     - AppImage
-    - snap
     - deb
-  maintainer: electronjs.org
+    - rpm
+    - snap
+    - freebsd
+    - pacman
+  maintainer: github.com/kaiotcp1
   category: Utility
 appImage:
   artifactName: ${name}-${version}.${ext}
 npmRebuild: false
-publish:
-  provider: generic
-  url: https://example.com/auto-updates

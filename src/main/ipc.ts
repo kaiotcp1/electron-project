@@ -19,3 +19,12 @@ import  { app, ipcMain} from 'electron'
 ipcMain.handle('get-version', () => {
   return app.getVersion();
 })
+
+ipcMain.handle('get-versions-info', () => {
+  return {
+    electron: process.versions.electron,
+    node: process.versions.node,
+    chrome: process.versions.chrome,
+    v8: process.versions.v8
+  };
+});

@@ -1,6 +1,6 @@
 import { contextBridge, ipcRenderer } from 'electron'
 import { ElectronAPI, electronAPI } from '@electron-toolkit/preload'
-import { Customer, NewCustomer } from '../shared/types/ipc';
+import { Customer, NewCustomer, ProjectInfo } from '../shared/types/ipc';
 
 declare global {
   export interface Window{
@@ -31,7 +31,10 @@ const api = {
 
   deleteCustomer: (id: string): Promise<PouchDB.Core.Response | null> => ipcRenderer.invoke('delete-customer', id),
 
-  getVersionApp: () => ipcRenderer.invoke('get-version')
+  getVersionApp: () => ipcRenderer.invoke('get-version'),
+
+  getVersionsInfo: (): Promise<ProjectInfo> => ipcRenderer.invoke('get-versions-info')
+
 };
 
 // Use `contextBridge` APIs to expose Electron APIs to

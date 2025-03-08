@@ -70,12 +70,6 @@ export function Layout() {
               isSidebarOpen={isSidebarOpen}
             />
             <SidebarItem
-              to="/detail"
-              icon={<List size={24} />}
-              label="Detalhes"
-              isSidebarOpen={isSidebarOpen}
-            />
-            <SidebarItem
               to="/about"
               icon={<Info size={24} />}
               label="Sobre"

@@ -17,3 +17,10 @@ export interface NewCustomer {
   phone?: string;
   status: boolean;
 };
+
+export interface ProjectInfo {
+  electron: string;
+  node: string;
+  chrome: string;
+  v8: string;
+}
