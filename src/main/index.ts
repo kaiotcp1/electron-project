@@ -13,7 +13,7 @@ function createWindow(): void {
     height: 970,
     show: true,
     backgroundColor: '#030712',
-    autoHideMenuBar: false,
+    autoHideMenuBar: true,
     ...(process.platform === 'linux'
       ? {
           icon: path.join(__dirname, '../../build/icon.png')
@@ -39,7 +39,7 @@ function createWindow(): void {
     mainWindow.show()
   })
 
-  mainWindow.webContents.openDevTools();
+  // mainWindow.webContents.openDevTools();
 
   mainWindow.webContents.setWindowOpenHandler((details) => {
     shell.openExternal(details.url)
