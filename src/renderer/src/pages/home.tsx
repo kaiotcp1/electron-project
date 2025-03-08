@@ -6,7 +6,7 @@ import { Customer } from "~/src/shared/types/ipc";
 const Home = () => {
   const queryClient = useQueryClient();
 
-  const { data } = useQuery({
+  const { data, isFetching } = useQuery({
     queryKey: ['customers'], queryFn: async () => {
       const response = await window.api.fetchAllCustomers();
       return response
@@ -33,10 +33,13 @@ const Home = () => {
     </div>
 
     <section className="flex flex-col gap-6 w-full h-full pb-10 ">
+      {!isFetching && data?.length === 0 && (
+        <p className="text-white">Nenhum cliente cadastrado!</p>
+      )}
       {data?.map((customer: Customer) => (
         <Link key={customer?._id}
-          to={'/'}
-          className="bg-gray-900 shadow-lg px-4 py-4 rounded-md"
+          to={`/customer/${customer?._id}`}
+          className="bg-gray-900 shadow-lg px-4 py-4 rounded-md hover:bg-gray-800 transition duration-300"
         >
           <p className="mb-2 font-semibold text-lg text-white">{customer.name}</p>
           <p className="font-normal">Email: {customer.email}</p>
